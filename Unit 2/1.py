@@ -4,9 +4,12 @@ file pap.txt .
 
 '''
 
-file = open('C:/Users/csguest/Desktop/Unit 2/pap.txt', 'r')
+file = open('C:/Users/csguest/Desktop/133-master/Unit 2/pap.txt', 'r')
+string = 'e'
 #print(file.read())
-
+counter = 0
 for line in file:
-    if 'property' in line:
-        print(line)
+    for words in line.split():
+        if string in words:
+            counter += 1
+print(counter)
