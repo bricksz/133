@@ -14,7 +14,7 @@ word containing three vowels.
 def vowel_collector(word):
     emptyset = []
     vowels = ['a', 'e', 'i', 'o', 'u']
-    '''
+    
     for x in vowels:
         if x in word:
             emptyset.append(x)   # gives unique vowels only
@@ -23,7 +23,7 @@ def vowel_collector(word):
         for j in vowels:
             if j == word[i]:
                 emptyset.append(j)  # gives total number of vowels , disregarding uniques
-    
+    '''
     return len(emptyset)
 
 def num_vowels():
@@ -42,5 +42,5 @@ def num_vowels():
             pass
     print('Highest number of unique vowels in the given word: ', current_word, '\nNumber of unique vowels:', current_ix)
             
-
-num_vowels()
+if __name__ == '__main__':
+    num_vowels()

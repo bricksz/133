@@ -4,7 +4,7 @@ file pap.txt .
 
 '''
 
-file = open('C:/Users/csguest/Desktop/133-master/Unit 2/pap.txt', 'r')
+file = open('C:/Users/csguest/Desktop/133-master/133-master/Unit 2/pap.txt', 'r')
 string = 'e'
 #print(file.read())
 counter = 0
