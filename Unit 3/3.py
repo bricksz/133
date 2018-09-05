@@ -5,7 +5,7 @@ be able to quickly find out how many times any particular words are used.
 '''
 
 emptydict = {}
-file = open('C:/Users/csguest/Desktop/133-master/133-master/Unit 2/pap.txt', 'r')
+file = open('C:/Users/csguest/Desktop//133-master/Unit 2/pap.txt', 'r')
 
 def cleanedup(s):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
