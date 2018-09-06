@@ -1,4 +1,18 @@
-import functions as f
+import random
 
-print(f.average([1,2,3,4]))
-print(f.cleanedup('This--WOW--is ready for split()'))
+def rejoin(word_arr):
+    text = ''
+    for letter in word_arr:
+        text += letter
+    return text
+
+def scramble(word):
+    emptylist = []
+    for i in range(len(word)):
+        emptylist.append(word[i])
+    random.shuffle(emptylist)
+    word = rejoin(emptylist)
+    return word
+
+word = 'cat'
+print(scramble(word))
