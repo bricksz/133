@@ -1,7 +1,7 @@
 import random
 import functions as f
 
-def count(hand,face,suit):
+def count_card(hand,face,suit):
     face_ix = 0
     suit_ix = 0
     for x in hand:
@@ -13,7 +13,7 @@ def count(hand,face,suit):
 face = 'Ace'
 suit = 'Clover'
 
-hand_detailed = count(f.deal(),face,suit)
+hand_detailed = count_card(f.deal(),face,suit)
 print(hand_detailed[0],
       "\n number of {}(s): ".format(face), hand_detailed[1],
       "\n number of {}(s): ".format(suit), hand_detailed[2])

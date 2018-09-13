@@ -12,20 +12,22 @@ the 2 of hearts, the jack of clubs, etc.
 import random as r
 import functions as f
 
-face_card = ['2','3','4','5','6','7','8','9','10','Jack','Queen','King', 'Ace']
-suit = ['Spade','Heart','Clover','Diamond']
+def deal():
+    face_card = ['2','3','4','5','6','7','8','9','10','Jack','Queen','King', 'Ace']
+    suit = ['Spade','Heart','Clover','Diamond']
 
-deck = []
-for i in suit:
-    for j in face_card:
-        card = [j, '_', i]
-        card = f.rejoin(card)
-        deck.append(card)
+    deck = []
+    for i in suit:
+        for j in face_card:
+            card = [j, '_', i]
+            card = f.rejoin(card)
+            deck.append(card)
 
-hand = []
-for k in range(5):
-    select_card = r.choice(deck)
-    deck.remove(select_card)
-    hand.append(select_card)
+    hand = []
+    for k in range(5):
+        select_card = r.choice(deck)
+        deck.remove(select_card)
+        hand.append(select_card)
 
-print(hand)
+    print(hand)
+    return hand
