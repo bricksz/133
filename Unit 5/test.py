@@ -1,4 +1,5 @@
 import os
+import random
 
 def lister(path):
     for filename in os.listdir(path):
