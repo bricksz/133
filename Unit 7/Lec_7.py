@@ -1,3 +1,4 @@
+
 def pctIncrease(begin, end):
     return 100*(end/begin-1)
 def increaseByPct(begin, pct):
@@ -10,17 +11,28 @@ def totalPct(pct):
 
     return pctIncrease(startValue, value)
 
-def goalSeek(lowLimit, highLimit, target, maxerror=.01):
+def totalPct2(pct):
+    startValue = 154.4
+    value = startValue
+    for year in range(10):
+        value = increaseByPct(value, pct)
+    return pctIncrease(startValue, value)
+
+
+def goalSeek(function,lowLimit, highLimit, target, maxerror=.01):
     error = maxerror + 1
+    
     while error > maxerror:
         guess = (lowLimit+highLimit)/2
-        result = totalPct(guess)
+        result = function(guess)
         error = abs(result-target)
         if result > target:
             highLimit = guess
         if result < target:
             lowLimit = guess
+            
     return guess
-print(goalSeek(-100, 100, 13.2))
+print(goalSeek(totalPct,-100, 100, 13.2))
 
-print(goalSeek(-100, 100, 13.2,.000001))
+print(goalSeek(totalPct2, -100, 100, 13.2,.000001))
+
